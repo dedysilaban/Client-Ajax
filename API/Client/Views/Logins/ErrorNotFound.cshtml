@@ -1,0 +1,23 @@
+﻿@{
+    ViewData["Title"] = "Login";
+    Layout = "_LayoutL";
+}
+
+<div class="container-fluid">
+    <div class="text-md-center">
+        <div class="error mx-auto text-white dt-center" data-text="NotFound!!">NotFound</div>
+    </div>
+</div>
+
+@section scripts{
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script>
+    Swal.fire({
+        icon: 'error',
+        title: 'Error!!!',
+        text: 'ACCOUNT NOT FOUND !!!! INVALID Email Or Password '
+    }).then(function () {
+        window.location = "/Logins";
+    });
+</script>
+}

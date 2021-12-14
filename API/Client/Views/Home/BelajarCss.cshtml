@@ -1,0 +1,43 @@
+﻿@{ Layout = "_LayoutTemp"; }
+<div>
+    <h2 class="h3 mb-2 text-gray-800">List Pokemon</h2>
+    <div class="card shadow mb-4">
+        <div class="card-header py-3"></div>
+        <div class="card-body">
+            <div class="table-responsive">
+                <table class="table table-hover">
+                    <thead>
+                        <tr>
+                            <td>No</td>
+                            <td>Name</td>
+                            <td>Detail Pokemon</td>
+                        </tr>
+                    </thead>
+                    <tbody id="tablePokemon">
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade bd-example-modal-lg" id="PokemonModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">SPESIFIKASI POKEMON</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section scripts {
+    <script src="~/Temp/js/Pokemon.js" asp-append-version="true"></script>
+}

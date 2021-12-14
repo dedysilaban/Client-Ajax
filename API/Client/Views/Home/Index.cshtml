@@ -1,0 +1,228 @@
+﻿@{ Layout = "_LayoutTemp"; }
+@*@{
+        ViewData["Title"] = "Home Page";
+    }
+
+    <div class="text-center">
+        <h1 class="display-4">Welcome</h1>
+        <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+    </div>
+
+    <div class="aa">
+        <ul>
+            <li class="item1">A</li>
+            <li class="item2">B</li>
+            <li class="item3">C</li>
+        </ul>
+    </div>
+    <h1 id ="ini Judul"></h1>
+    <div class="Judul"></div>*@
+
+@*<div class="h1">Hallo Ini adalah Pembelajaran Boostrep</div>
+    <div class="container">
+        <div class="row">
+            <div class="col A">
+                Navbars require a wrapping .navbar with .navbar-expand{-sm|-md|-lg|-xl|-xxl} for responsive collapsing and color scheme classes.
+            </div>
+            <div class="col B">
+                Navbars and their contents are fluid by default. Change the container to limit their horizontal width in different ways.
+            </div>
+            <div class="col C">
+                Use our spacing and flex utility classes for controlling spacing and alignment within navbars.
+            </div>
+        </div>
+    </div>*@
+@*<div class="container-fluid">
+       <div class="container">
+           <div class="row">
+               <div class="col">
+                   <div class=" mb-5"></div>
+                   <button id="aa" type="button" class="btn-success">
+                       Learn more about the team maintaining Bootstrap, how and why the project started, and how to get involved
+                   </button>
+                   <br>
+                   <div class=" my-3 bg-primary"></div>
+                   <button id="myBtn">About Bootstrap</button>
+               </div>
+               <div class="col">
+                   <div class=" mb-lg-5"></div>
+                   <button id="a" type="button" class="btn-block">
+                       We’re actively looking to grow this team and would love to hear from you if you’re excited about CSS at scale, writing and maintaining vanilla JavaScript plugins, and improving build tooling processes for frontend code.
+                   </button>
+               </div>
+           </div>
+       </div>
+    </div>*@
+
+
+
+
+@*<div class="container-fluid py-4" style="font-family: 'Courier New'">
+        List Starwars
+        <table class="table table-striped table-hover table-bordered table-sm">
+            <thead>
+                <tr class="table-success">
+                    <th>No</th>
+                    <th>Name</th>
+                    <th>URL</th>
+                    <th>Height</th>
+                    <th>Gender</th>
+                    <th>Skin Color</th>
+                </tr>
+            </thead>
+            <tbody id="ListSW">
+            </tbody>
+        </table>
+    </div>
+
+
+    @section Scripts{
+        <script type="text/javascript" src="~/js/Javascript.js"></script>
+    }*@
+<div class="container-fluid p-1 text-black">
+    <div>
+        <h2>List Employee</h2>
+        <p>
+            <button type="button" class="btn btn-primary btn-sm" id="btnReg" data-toggle="modal" data-target="#EmployeeModal">Create Employee</button>
+            <button type="button" class="btn btn-success btn-sm" onclick="eExcel();"><i class="fa fa-file-excel">Excel</i></button>
+        </p>
+    </div>
+    <div class="card shadow mb-4">
+        <div class="card-header py-3"></div>
+        <div class="card-body">
+            <div class="table-responsive">
+                <table id="tabelEmployee" class="table table-primary">
+                    <thead>
+                        <tr>
+                            <td>No</td>
+                            <td>Nik</td>
+                            <td>FirstName</td>
+                            <td>LastName</td>
+                            <td>FullName</td>
+                            <td>Phone</td>
+                            <td>Birthdate</td>
+                            <td>Salary</td>
+                            <td>Email</td>
+                            <td>Gender</td>
+                            <td>Action</td>
+                        </tr>
+                    </thead>
+                    <tbody class="tbody">
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade bd-example-modal-lg" id="EmployeeModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Data Employee</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form id="EmployeeForm">
+                        <div class="form-group">
+                            <label for="NIK">NIK</label>
+                            <input type="text" class="form-control" id="NIK" name="NIK" placeholder="NIK">
+                            <div class="invalid-feedback">
+                                NIK nya isi !!!
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                <label for="FirstName">First Name</label>
+                                <input type="text" class="form-control" id="FirstName" name="firstName" placeholder="First Name">
+                                <div class="invalid-feedback">
+                                    First Name Harus diisi !!!
+                                </div>
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="LastName">Last Name</label>
+                                <input type="text" class="form-control" id="LastName" name="lastName" placeholder="Last Name">
+                                <div class="invalid-feedback">
+                                    Last Name Harus diisi !!!
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                <label for="Phone">Phone</label>
+                                <input type="number" class="form-control" id="Phone" name="phone" placeholder="08xxxxx">
+                                <div class="invalid-feedback">
+                                    Nomor Telepon harus diisi !!!
+                                </div>
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="BirthDate">BirthDate</label>
+                                <input type="date" class="form-control" id="Birthdate" name="birthDate" placeholder="BirthDate">
+                                <div class="invalid-feedback">
+                                    Tanggal Lahir Harus diisi !!!
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col-md-4">
+                                <label for="Salary">Salary</label>
+                                <div class="input-group mb-2 mr-sm-2">
+                                    <div class="input-group-prepend">
+                                        <div class="input-group-text">Rp.</div>
+                                    </div>
+                                    <input type="number" class="form-control" name="salary" id="Salary">
+                                    <div class="invalid-feedback">
+                                        salary harus diisi !!!
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-group col-md-6">
+                                <label for="Email">Email</label>
+                                <input type="text" class="form-control" name="email" id="Email">
+                                <div class="invalid-feedback">
+                                    Email harus diisi !!!
+                                </div>
+                            </div>
+                            <div class="form-group col-md-2 was-validated">
+                                <label for="Gender">Gender</label>
+                                <select id="Gender" name="Gender" class="custom-select mr-sm-2" required>
+                                    <option value="">Choose...</option>
+                                    <option value="0">Male</option>
+                                    <option value="1">Female</option>
+                                </select>
+                                <div class="invalid-feedback">
+                                    Gender harus diisi !!!
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-primary" id="btnAdd" onclick="InsertEmployee()" ;>Add</button>
+                            <button type="button" class="btn btn-primary" id="btnUpdate" style=" display:none;" onclick="Update();">Update</button>
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal" onclick="window.location.reload();">Close</button>
+                        </div>
+                    </form>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+    @section scripts {
+        <script src="~/Temp/js/DataEmployee.js" asp-append-version="true"></script>
+    }
+
+@*<div class="modal-footer">
+        <button type="submit" class="btn btn-primary" id="btnAdd" form="EmployeeForm" >Add</button>
+    </div>*@
+
+@* <div class="modal-footer">
+
+        <button type="button" class="btn btn-primary" id="btnAdd"  onclick="return InsertEmployee()";>Add</button>
+        <button type="button" class="btn btn-primary" id="btnUpdate" style=" display:none;" onclick="Update();">Update</button>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+    </div>*@

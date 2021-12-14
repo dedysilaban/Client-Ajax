@@ -1,0 +1,86 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Client </title>
+    <link href="~/Temp/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
+    <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+          rel="stylesheet">
+    <link href="~/Temp/css/sb-admin-2.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.3/css/jquery.dataTables.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/buttons/2.0.1/css/buttons.dataTables.min.css">
+
+    @*    <link rel="stylesheet" href="css/mdb.min.css" />*@
+    <link rel="stylesheet" href="~/Temp/css/DataEmployee.css" />
+    <link rel="stylesheet" href="~/Temp/js/DataEmployee.js" />
+</head>
+
+
+<body class="bg-gradient-light">
+    <div  class="container-fluid">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="sticky-footer bg-white fixed-bottom">
+        <div id="body" class="container my-auto">
+            <div class="copyright text-center my-auto">
+                <span>Copyright &copy; Your Website 2021</span>
+            </div>
+        </div>
+    </footer>
+
+    <a class="scroll-to-top rounded" href="#page-top">
+        <i class="fas fa-angle-up"></i>
+    </a>
+
+    <script src="~/Temp/vendor/jquery/jquery.min.js"></script>
+    <script src="~/Temp/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="~/Temp/vendor/jquery-easing/jquery.easing.min.js"></script>
+    <script src="~/Temp/js/sb-admin-2.min.js"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.1/jquery.validate.min.js"></script>
+    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.js"></script>
+    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/buttons/2.0.1/js/dataTables.buttons.min.js"></script>
+    <script type="text/javascript" charset="utf8" src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.3/jszip.min.js"></script>
+    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/buttons/2.0.1/js/buttons.html5.min.js"></script>
+
+@*    <script type="text/javascript" src="js/popper.min.js"></script>
+    <script type="text/javascript" src="js/mdb.js"></script>*@
+    <script src="~/Temp/js/DataEmployee.js" asp-append-version="true"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+
+    @RenderSection("Scripts", required: false)
+</body>
+</html>
+
+
+
+
+@*<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>@ViewData["Title"] - Client</title>
+        <link rel="stylesheet" href="/css/login.css" />
+        <script src="https://kit.fontawesome.com/a81368914c.js"></script>
+    </head>
+
+
+    <body>
+        <main role="main" class=" main pb-3">
+            @RenderBody()
+        </main>
+        <script src="~/js/login.js" asp-append-version="true"></script>
+
+        @RenderSection("Scripts", required: false)
+    </body>
+
+    </html>
+*@
